@@ -1,0 +1,44 @@
+<view class="container">
+  <block wx:for="{{recordings}}" wx:key="_id">
+    <view class="recording-item">
+      <text class="recording-text">{{item.text}}</text>
+      <view class="button-container">
+        
+        <!-- 录制/停止按钮占同一位置 -->
+        <block wx:if="{{item.isRecording && isRecording}}">
+          <button bindtap="stopRecording" data-id="{{item._id}}">停止</button>
+        </block>
+        <block wx:else>
+          <button 
+            disabled="{{isRecording || isPlayingAny}}" 
+            bindtap="startRecording" 
+            data-id="{{item._id}}"
+            class="{{isRecording || isPlayingAny ? 'disabled-button' : ''}}">
+            录音
+          </button>
+        </block>
+
+        <!-- 播放/暂停按钮占同一位置 -->
+        <block wx:if="{{isPlaying[item._id] && isPlayingAny}}">
+          <button bindtap="pausePlayback" data-id="{{item._id}}">暂停</button>
+        </block>
+        <block wx:else>
+          <button 
+            disabled="{{isRecording || isPlayingAny || !item.hasFile}}" 
+            bindtap="playRecording" 
+            data-id="{{item._id}}" 
+            class="{{isRecording || isPlayingAny || !item.hasFile ? 'disabled-button' : ''}}">
+            已完成录制/播放
+          </button>
+        </block>
+
+      </view>
+    </view>
+  </block>
+
+  <!-- 加载更多按钮 -->
+  <button 
+    wx:if="{{hasMore}}" 
+    bindtap="loadMoreRecordings" 
+    class="load-more">加载更多</button>
+</view>

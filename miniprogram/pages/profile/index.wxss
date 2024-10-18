@@ -1,0 +1,76 @@
+/* 页面容器 */
+.container {
+  padding: 20px;
+  background: linear-gradient(135deg, #7ec8e3, #b5e2d7); /* 渐变背景颜色 */
+  height: 100vh;
+  justify-content: center; /* 垂直居中内容 */
+  align-items: center; /* 水平居中内容 */
+}
+
+/* 通用文本样式 */
+text {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+  text-align: left;
+}
+
+/* 每个表单项的样式，保证 text 和输入框对齐 */
+.form-item {
+  display: flex;
+  align-items: center;  /* 垂直居中对齐 */
+  margin-bottom: 20px;
+}
+
+/* 性别选择项目的样式 */
+.gender-item {
+  display: flex;
+  align-items: center;
+}
+
+/* 调整性别选择的样式，增加间距 */
+.gender-group {
+  display: flex;
+  margin-left: 30px;
+}
+
+.gender-group label {
+  margin-right: 30px;
+}
+
+/* 输入框样式 */
+input {
+  flex-grow: 1;  /* 输入框占据剩余的水平空间 */
+  padding: 0;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  height: 40px;
+  text-align: center; /* 水平居中 */
+}
+
+input:focus {
+  border-color: #1aad19;
+  outline: none;
+}
+
+/* 按钮样式 */
+button {
+  background-color: #1aad19;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #128b16;
+}

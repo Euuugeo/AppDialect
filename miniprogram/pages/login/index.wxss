@@ -1,0 +1,42 @@
+/* 页面容器，背景颜色设置为渐变色 */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #7ec8e3, #b5e2d7); /* 渐变背景颜色 */
+}
+
+/* 圆形 Logo 图片 */
+.logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* 将图片设置为圆形 */
+  border: 5px solid white; /* 圆形图片的白色边框 */
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 轻微的阴影效果 */
+}
+
+/* 登录标题样式 */
+.title {
+  font-size: 32px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* 按钮样式 */
+button {
+  background-color: #1aad19;
+  color: white;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 18px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #128b16;
+}

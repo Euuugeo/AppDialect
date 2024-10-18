@@ -1,0 +1,77 @@
+/* 页面容器 */
+.container {
+  padding: 20px;
+  background: linear-gradient(135deg, #7ec8e3, #b5e2d7); /* 渐变背景颜色 */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* 录音项样式 */
+.recording-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 文本样式 */
+.recording-text {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* 按钮容器样式 */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* 按钮样式 */
+button {
+  background-color: #1aad19;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+button:active {
+  background-color: #128b16;
+}
+
+/* 禁用状态的按钮样式 */
+button[disabled], .disabled-button {
+  background-color: #d3d3d3;
+  color: #fff;
+  border: none;
+  pointer-events: none; /* 确保禁用按钮不能点击 */
+}
+
+/* 加载更多按钮样式 */
+button.load-more {
+  width: 100%;
+  background-color: #d3d3d3;
+  margin-top: 20px;
+}
+
+/* 状态提示 */
+.status {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}

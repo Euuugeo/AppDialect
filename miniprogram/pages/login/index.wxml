@@ -1,0 +1,10 @@
+<view class="container">
+  <!-- 显示 Logo 图片 -->
+  <image class="logo" src="/images/logo.png" mode="aspectFit"></image>
+
+  <!-- 登录标题 -->
+  <text class="title">登录进入平台</text>
+
+  <!-- 微信授权登录按钮 -->
+  <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">微信授权登录</button>
+</view>

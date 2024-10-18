@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="form-item">
+    <text>ID: {{userId}}</text>
+  </view>
+  <view class="form-item">
+    <text>姓名：</text>
+    <input placeholder="请输入姓名" value="{{name}}" bindinput="handleInputChange" data-field="name"/>
+  </view>
+  <view class="form-item">
+    <text>年龄：</text>
+    <input placeholder="请输入年龄" type="number" value="{{age}}" bindinput="handleInputChange" data-field="age"/>
+  </view>
+  <view class="form-item gender-item">
+    <text>性别：</text>
+    <radio-group class="gender-group" bindchange="bindGenderChange">
+      <label><radio value="男" checked="{{gender === '男'}}" />男</label>
+      <label><radio value="女" checked="{{gender === '女'}}" />女</label>
+    </radio-group>
+  </view>
+  <view class="form-item">
+    <text>籍贯：</text>
+    <picker mode="multiSelector" range="{{multiArray}}" value="{{multiIndex}}" 
+            bindcolumnchange="bindMultiPickerColumnChange" bindchange="bindMultiPickerChange">
+      <view class="picker">
+        {{location || '选择省 - 市 - 区'}}
+      </view>
+    </picker>
+  </view>
+  <button bindtap="saveUserInfo">保存个人信息</button>
+
+  <!-- 新增的“进入录音界面”按钮 -->
+  <button bindtap="goToRecording">进入录音界面</button>
+</view>
