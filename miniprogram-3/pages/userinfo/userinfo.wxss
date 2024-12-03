@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;  /* 页面整体内边距 */
+}
+
+.form-item {
+  margin-bottom: 15px;  /* 每个表单项的间距 */
+}
+
+.form {
+  width: 80%;
+}
+
+input, .picker, button {
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.submit-btn {
+  padding: 10px;
+  background-color: #007aff;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
