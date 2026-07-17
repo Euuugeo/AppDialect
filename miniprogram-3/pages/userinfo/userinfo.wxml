@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="form">
+    <text>姓名：</text>
+    <input type="text" placeholder="请输入姓名" bindinput="bindNameInput" />
+
+    <text>年龄：</text>
+    <input type="number" placeholder="请输入年龄" bindinput="bindAgeInput" />
+
+    <text>性别：</text>
+    <radio-group bindchange="bindGenderChange">
+      <label><radio value="男" />男</label>
+      <label><radio value="女" />女</label>
+    </radio-group>
+
+    <text>籍贯：</text>
+    <picker mode="multiSelector" range="{{multiArray}}" value="{{multiIndex}}" 
+  bindcolumnchange="bindMultiPickerColumnChange" bindchange="bindMultiPickerChange">
+  <view class="picker">
+    {{selectedProvince || '选择省'}} - {{selectedCity || '选择市'}} - {{selectedDistrict || '选择区'}}
+  </view>
+</picker>
+
+<button bindtap="submitInfo">提交</button>
+
+  </view>
+</view>
